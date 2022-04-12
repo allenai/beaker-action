@@ -19,7 +19,7 @@ The arguments to the Beaker command.
 ## Example
 
 ```yaml
-uses: allenai/beaker-action@v1
+uses: allenai/beaker-action@v0
 with:
   token: ${{ secrets.BEAKER_TOKEN }}
   command: account
