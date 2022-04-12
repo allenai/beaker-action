@@ -2,7 +2,7 @@
 
 ## Steps
 
-1. Update the `VERSION` global constant in `beaker_run.py`.
+1. Update the `VERSION` file to list the new version.
 
 2. Run the release script:
 
@@ -10,7 +10,7 @@
     ./scripts/release.sh
     ```
 
-    This will commit the changes to the CHANGELOG and `version.py` files and then create a new tag in git
+    This will commit the changes to the CHANGELOG and VERSION files and then create a new tag in git
     which will trigger a workflow on GitHub Actions that handles the rest.
 
 3. Lastly, in order to publish to the Actions marketplace, find the major, minor, and patch releases

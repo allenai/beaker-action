@@ -1,7 +1,8 @@
 from datetime import datetime
 from pathlib import Path
 
-from beaker_run import VERSION
+with open("VERSION") as version_file:
+    VERSION = version_file.read()
 
 
 def main():

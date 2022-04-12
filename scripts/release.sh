@@ -4,9 +4,9 @@ set -e
 
 export PYTHONPATH='./'
 
-TAG=$(python -c 'from beaker_run import VERSION; print("v" + VERSION)')
-MINOR_TAG=$(python -c 'from beaker_run import VERSION; print("v" + VERSION.split(".")[0] + "." + VERSION.split(".")[1])')
-MAJOR_TAG=$(python -c 'from beaker_run import VERSION; print("v" + VERSION.split(".")[0])')
+TAG=v$(cat VERSION)
+MINOR_TAG=${TAG%.*}
+MAJOR_TAG=${TAG%.*.*}
 
 read -p "Creating new release for $TAG. Do you want to continue? [Y/n] " prompt
 
