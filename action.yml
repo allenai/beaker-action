@@ -1,0 +1,23 @@
+name: beaker
+description: Run Beaker command
+inputs:
+  token:
+    description: Your Beaker token
+    required: true
+  command:
+    description: The Beaker command to run (e.g. `image` or `experiment`)
+    required: true
+  args:
+    description: The arguments to the Beaker command
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    BEAKER_TOKEN: ${{ inputs.token }}
+  args:
+    - ${{ inputs.command }}
+    - ${{ inputs.args }}
+branding:
+  icon: package
+  color: blue
