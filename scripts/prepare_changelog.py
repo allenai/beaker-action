@@ -2,7 +2,7 @@ from datetime import datetime
 from pathlib import Path
 
 with open("VERSION") as version_file:
-    VERSION = version_file.read()
+    VERSION = version_file.read().strip()
 
 
 def main():
