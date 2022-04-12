@@ -1,5 +1,5 @@
-name: beaker
-description: Run Beaker command
+name: beaker-command
+description: Run a Beaker command
 inputs:
   token:
     description: Your Beaker token
