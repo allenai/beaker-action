@@ -1,8 +1,7 @@
 FROM alpine:latest
 
-RUN apk add --no-cache curl wget grep
-
-RUN curl -s https://api.github.com/repos/allenai/beaker/releases/latest \
+RUN apk add --no-cache curl wget grep jq && \
+    curl -s https://api.github.com/repos/allenai/beaker/releases/latest \
       | grep 'browser_download_url.*linux' \
       | cut -d '"' -f 4 \
       | wget -qi - \

@@ -30,7 +30,7 @@ jobs:
         task:
           - name: account-whoami
             command: account
-            args: whoami
+            args: whoami --format=json | jq '.[0].name'
 
           - name: workspace-list
             command: workspace
