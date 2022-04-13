@@ -30,11 +30,11 @@ jobs:
         task:
           - name: account-whoami
             command: account
-            args: whoami
+            args: whoami --format=json | jq '.[0].name'
 
           - name: workspace-list
             command: workspace
-            args: list ai2 --text=petew --format=json | jq '.[0].name'
+            args: list ai2 --text=petew
 
     steps:
       - uses: actions/checkout@v3
