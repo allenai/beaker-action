@@ -34,7 +34,7 @@ jobs:
 
           - name: workspace-list
             command: workspace
-            args: list ai2 --text=petew
+            args: list ai2 --text=petew --format=json | jq '.[0].name'
 
     steps:
       - uses: actions/checkout@v3
