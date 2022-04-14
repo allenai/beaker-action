@@ -1,4 +1,4 @@
-# beaker-action
+# beaker-command
 
 A GitHub Action for using the Beaker CLI.
 
